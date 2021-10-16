@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -std=c++11 -shared -Wl,-soname,libcolor_transfer.so -o libcolor_transfer.so CMakeFiles/color_transfer.dir/src/ColorTransfer.cpp.o 
