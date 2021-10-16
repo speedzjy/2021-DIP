@@ -1,5 +1,0 @@
-/home/speed/zjyspeed/研一上/数字图像处理/homework/2021-作业1/color-transfer/ColorTransfer-cpp/build/CMakeFiles/edit_cache.dir
-/home/speed/zjyspeed/研一上/数字图像处理/homework/2021-作业1/color-transfer/ColorTransfer-cpp/build/CMakeFiles/color_transfer_use_formula.dir
-/home/speed/zjyspeed/研一上/数字图像处理/homework/2021-作业1/color-transfer/ColorTransfer-cpp/build/CMakeFiles/rebuild_cache.dir
-/home/speed/zjyspeed/研一上/数字图像处理/homework/2021-作业1/color-transfer/ColorTransfer-cpp/build/CMakeFiles/color_transfer_use_lib.dir
-/home/speed/zjyspeed/研一上/数字图像处理/homework/2021-作业1/color-transfer/ColorTransfer-cpp/build/CMakeFiles/color_transfer.dir
