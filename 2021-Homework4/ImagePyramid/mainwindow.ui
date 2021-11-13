@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1429</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="psnrlabel">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>350</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PSNR</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="psnrlineEdit">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>350</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ssimlineEdit">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>380</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ssimlabel">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>380</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SSIM</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1429</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="actionNewImage"/>
+   </widget>
+   <widget class="QMenu" name="menuDownSample">
+    <property name="title">
+     <string>下采样(&amp;D)</string>
+    </property>
+    <addaction name="actionPool"/>
+    <addaction name="actionGauss"/>
+   </widget>
+   <widget class="QMenu" name="menu_U">
+    <property name="title">
+     <string>上采样(&amp;U)</string>
+    </property>
+    <addaction name="actionLaplace"/>
+    <addaction name="actionNN"/>
+    <addaction name="actionLinear"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>计算误差</string>
+    </property>
+    <addaction name="actionGenDiff"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuDownSample"/>
+   <addaction name="menu_U"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNewImage">
+   <property name="text">
+    <string>打开图片(&amp;O)</string>
+   </property>
+  </action>
+  <action name="actionPool">
+   <property name="text">
+    <string>池化</string>
+   </property>
+  </action>
+  <action name="actionGauss">
+   <property name="text">
+    <string>高斯降采样</string>
+   </property>
+  </action>
+  <action name="actionLaplace">
+   <property name="text">
+    <string>Laplace金字塔</string>
+   </property>
+  </action>
+  <action name="actionGenDiff">
+   <property name="text">
+    <string>生成图像</string>
+   </property>
+  </action>
+  <action name="actionNN">
+   <property name="text">
+    <string>最近邻插值</string>
+   </property>
+  </action>
+  <action name="actionLinear">
+   <property name="text">
+    <string>双线性插值</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
