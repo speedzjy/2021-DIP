@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1071</width>
+    <height>566</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1071</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="actionNewImage"/>
+    <addaction name="actionBkdImage"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>提取(E)</string>
+    </property>
+    <addaction name="actionFore"/>
+    <addaction name="actionBack"/>
+   </widget>
+   <widget class="QMenu" name="menu_Morph">
+    <property name="title">
+     <string>融合(M)</string>
+    </property>
+    <addaction name="actionMorph"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_Morph"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNewImage">
+   <property name="text">
+    <string>打开源图片</string>
+   </property>
+  </action>
+  <action name="actionFore">
+   <property name="text">
+    <string>提取前景</string>
+   </property>
+  </action>
+  <action name="actionBack">
+   <property name="text">
+    <string>提取背景</string>
+   </property>
+  </action>
+  <action name="actionBkdImage">
+   <property name="text">
+    <string>打开背景图片</string>
+   </property>
+  </action>
+  <action name="actionMorph">
+   <property name="text">
+    <string>Morph</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
