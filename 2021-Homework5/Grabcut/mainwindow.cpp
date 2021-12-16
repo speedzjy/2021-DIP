@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionFore, SIGNAL(triggered()), this, SLOT(extractFore()));
     connect(ui->actionBack, SIGNAL(triggered()), this, SLOT(extractBack()));
     connect(ui->actionMorph, SIGNAL(triggered()), this, SLOT(morphing()));
+    connect(ui->actionSave, SIGNAL(triggered()), this, SLOT(saveImage()));
 
     this->source = nullptr;
     this->source_tmp = nullptr;
@@ -31,6 +32,13 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::saveImage() {
+    if (!(this->cv_foreImage.empty())) {
+        cv::imwrite("foreImage.png", this->cv_foreImage);
+    }
+}
+
 
 void MainWindow::extractFore() {
 
@@ -74,7 +82,24 @@ void MainWindow::extractFore() {
     cv::Mat foreground(this->cv_source.size(), CV_8UC3, cv::Scalar(255, 255, 255));
 
     this->cv_source.copyTo(foreground, mask);
+
+    cv::imshow("mask",mask);
+    //     make foreground transparent
+    cv::cvtColor(foreground, foreground, CV_BGR2BGRA);
+
+    for (int i = 0; i < foreground.rows; ++i) {
+        for (int j = 0; j < foreground.cols; ++j) {
+            cv::Vec4b &fpixel = foreground.at<cv::Vec4b>(i, j);
+            if (mask.at<uchar>(i, j) == 0 || mask.at<uchar>(i, j) == 2) {
+                fpixel[3] = 0;
+            }
+        }
+    }
+
     foreground.copyTo(this->cv_foreImage);
+
+//    cv::imwrite("foreImage.png", this->cv_foreImage);
+//    cv::imshow("fore",this->cv_foreImage);
 
     QImage *img = new QImage(cvMat2QImage(this->cv_foreImage, true, true));
 

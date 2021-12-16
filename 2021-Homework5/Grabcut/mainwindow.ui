@@ -43,9 +43,16 @@
     </property>
     <addaction name="actionMorph"/>
    </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>保存(S)</string>
+    </property>
+    <addaction name="actionSave"/>
+   </widget>
    <addaction name="menu_F"/>
    <addaction name="menu_E"/>
    <addaction name="menu_Morph"/>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNewImage">
@@ -71,6 +78,11 @@
   <action name="actionMorph">
    <property name="text">
     <string>Morph</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>save</string>
    </property>
   </action>
  </widget>

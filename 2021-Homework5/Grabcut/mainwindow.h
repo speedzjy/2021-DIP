@@ -36,6 +36,7 @@ public slots:
     void extractFore();
     void extractBack();
     void morphing();
+    void saveImage();
 
 protected:
     void paintEvent(QPaintEvent *event);
